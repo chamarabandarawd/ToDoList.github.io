@@ -40,3 +40,15 @@ listContainer.addEventListener("click", function (e) {
     }
 }, false);
 
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+
+
+function loadData() {
+    const savedData = localStorage.getItem("data");
+    if (savedData) {
+        listContainer.innerHTML = savedData;
+    }
+}
